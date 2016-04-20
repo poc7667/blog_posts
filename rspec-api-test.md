@@ -12,7 +12,3 @@ In most case, you should create  `spec/controllers/api/v1/xxx_controller_spec.rb
 
 [Take a look this sample script](https://gist.github.com/poc7667/edd252dac217c666b6f4)
 
-
-
-
-
