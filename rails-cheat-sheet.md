@@ -116,13 +116,15 @@ Migration for belong_to and has_many
 
 # Generator
 
-  With namespace
+With namespace
   
     rails g controller Admin::Dashboard index create delete
 
-  Api generator
+Api generator
 
-  
+    rails g model Post title:string body:string
+    rake db:migrate
+    rails generate scaffold_controller api/Post --model-name=Post
 
 # paperclip
 
