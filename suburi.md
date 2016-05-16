@@ -14,7 +14,7 @@ title: SUBURI setting on Rails with Nginx
     end
 
 
-# application.rb 
+# application.rb
 
       class Application < Rails::Application
         config.relative_url_root = ENV['RAILS_RELATIVE_URL_ROOT']
