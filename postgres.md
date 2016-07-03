@@ -20,3 +20,10 @@ If you want to start the DB on boot
     cp /usr/local/Cellar/postgresql/<VERSION>/homebrew.mxcl.postgresql.plist ~/Library/LaunchAgents/
     eg: cp /usr/local/Cellar/postgresql/9.5.1/homebrew.mxcl.postgresql.plist ~/Library/LaunchAgents
 
+Dump database
+
+    pg_dump -h localhost -U postgres -f alpa.dump AlphaLoan_production -Fc
+
+Restore database
+
+    pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d AlphaLoan_production ./alpa.dump
