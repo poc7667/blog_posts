@@ -137,6 +137,8 @@ add logo_image to model `Bank`
 
 make mock data to accelerate test performance
 
+利用 
+
 
 # annotate
 
@@ -159,3 +161,4 @@ It will append the fields/asttribute to your model files.
       factory :bank do
       end
     end
+
