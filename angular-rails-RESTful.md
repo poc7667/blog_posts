@@ -3,8 +3,14 @@ title: Angular Rails RESTful
 tags: anguar, rails
 ---
 
+Integrate Angular (frontend) and Rails (backend) with RESTful APIs.
 
-![This post is inspired by this post](https://www.google.com.tw/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwirs9_m4JnMAhWFGpQKHXiMCJkQFggcMAA&url=https%3A%2F%2Fblog.joshsoftware.com%2F2014%2F11%2F18%2Fhow-to-create-nested-form-using-angularjs%2F&usg=AFQjCNH_5JwCAnpEl8oQ8KTw9VizRrG7Cg&sig2=itfFBS_iY3jnd2U1ZxNr3Q) 
+[This post is inspired by this post](https://www.google.com.tw/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwirs9_m4JnMAhWFGpQKHXiMCJkQFggcMAA&url=https%3A%2F%2Fblog.joshsoftware.com%2F2014%2F11%2F18%2Fhow-to-create-nested-form-using-angularjs%2F&usg=AFQjCNH_5JwCAnpEl8oQ8KTw9VizRrG7Cg&sig2=itfFBS_iY3jnd2U1ZxNr3Q) 
+
+
+<!-- more --> 
+
+
 
 
 # Prepare `ngRoute`, `ngResource` services
