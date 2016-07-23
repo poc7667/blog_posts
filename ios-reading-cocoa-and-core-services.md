@@ -5,13 +5,50 @@ tags: iOS
 ---
 
 
-# Cocoa Touch Layer
+# What the framework does
 
+I think poeple are usually compare the difference between framework and libraries.
+
+For my point of view,
+
+A modern framework not only provides a set of useful libraries but also provides the callbacks for putting hooks on the necessary place and a MVC model for developers to develop it.
+
+A framework is a must to separate of concerns which can ease the complexity of design.
+
+Libraries are more like external API, we just use it, call it.
+
+# Why you're interested in the framework
+
+To learn a language is relatively easy for me now. 
+
+But a framework will take maybe 5 times or more to learn it.
+
+You need to understand the live cycle, callbacks, components, and some memory issues and multi-threading issues behind the hood.
+
+It's a hard way in the beginning.
+
+However once you get familiared with a framework.
+
+It can shorten the time of developing products with a good quality and make your project structure in a elegant way.
+
+
+# A brief summary of how the framework is used
+
+
+It depends on what kind of features does your app need.
+
+When it comes to develop an iOS app, at least, you will need `cocoa touch framework` to provide basic UI components and `Standard system view controllers` to provide a blue-print for the entry.
+
+If you need to swap files among iOS/macbooks devices, you might need to AirDrop framework.
+
+If there is a PUB-SUB message flow within your service,  you might need Push notification framework  to help you make the feature.
+
+
+# Summary of iOS frameworks
+
+## Cocoa Touch Layer
 
 Cocoa Touch is a collection of frameworks which are providing appearance (UI) for our app and multi-tasking, touch-based input, push notifications.
-
-
-
 
 
 ## Standard system view controllers
@@ -87,7 +124,6 @@ The notifications coming from the app itself. you can schedule it.
 TL;DR
 
 
-
 # Framworks
 
 - Address Book UI Framework:  contacts-related events
@@ -96,12 +132,6 @@ TL;DR
 - Message UI 
 - GameKit, iAD, 
 
+# Resources
 
-
-
-
-
-
-
-
-
+- [TOP IOS SDKS](http://mightysignal.com/top-ios-sdks)

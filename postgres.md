@@ -3,6 +3,13 @@ title: PostgreSQL setting
 tags: DB
 ---
 
+Notes for postgresql operation
+
+
+<!-- more --> 
+
+
+
 遇到新舊版DB衝突，通常升級資料庫之後會遇到
 
     FATAL:  database files are incompatible with server
@@ -27,3 +34,31 @@ Dump database
 Restore database
 
     pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d AlphaLoan_production ./alpa.dump
+
+
+PSQL configuration file location `/usr/local/var/postgres` 
+
+    CREATE USER postgres WITH PASSWORD '<YOUR_PASSWORD>';
+    ALTER USER postgres WITH SUPERUSER;
+
+
+Login postgresql on ubuntu and change password
+
+    sudo su - postgres ; psql
+    ALTER USER "postgres" WITH PASSWORD 'alphaloan123';
+    postgres=# ALTER USER "postgres" WITH PASSWORD 'alphaloan123';
+    ALTER ROLE
+    postgres=# \q
+
+
+# md5 peer authentication 問題
+
+you need to change the auth method from `peer` to `md5` to enable Rails can works.
+
+    cd /etc/postgresql/9.5/main
+    sudo vim pg_hba.conf
+    sudo /etc/init.d/postgresql restart
+
+
+http://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge
+
