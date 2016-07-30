@@ -11,6 +11,99 @@ Notes for learning iOS / Swift
 
 <!-- more --> 
 
+# Adv String
+
+api 在3.0 有改變，
+
+avanced 的方法要去了解。
+
+一個character 不代表一個 byte 而是代表一個 humman readable char 為單位，有可能是1~N byte
+
+
+
+# Adv tuples
+
+可以用在 switch 比對
+
+decouple 
+
+    x = (0,1,2)
+    (a,b,_) = x 
+    a //0
+    b //1
+    c //2
+
+# Sets
+
+String, 是一個 structure.
+
+structure 無法繼承
+
+    var tools: Set<String>
+    tools = ["A", "B", "C"]
+
+
+
+
+# Dictionary
+
+    var wc: [String: INt]
+    wd = [String: Int]() // new a dictionary
+
+你去跟 dictionary 拿一個 value, 回傳的一定都是 `optional`
+
+is a kind of `structure`.
+
+
+
+# Array
+
+Strongly type, 
+
+    var a = [String]() // new 一個 array, ()代表initialize
+    a.append("poc")
+
+is a kind of Structure,
+
+其實你也可以讓裡面的item 保持 `any`, `anyObject`
+
+pass by value, cuz its kind of Array
+
+
+# Struct vs. Object 
+
+Struct alwasy call by value 
+
+Object call by reference.
+
+如果你要讓 object 本身是 immutable 你可以嘗試 new struct 在給予 let
+
+mutating 除了給 compiler 看，也給人看。
+
+提示給compiler，說這個 function 會change some values.
+
+
+    class Person{
+        var yoyo: Person? <- recursive prop. (不可以在struct 裡面使用)
+    }
+
+## tuple (pass by value)
+
+simple unnamed struct.
+
+    var x: (1,2,4)
+
+呼叫方式就是用 index 方式 access, x.0 , x.1
+
+但是你也可以擁有 named tuple 
+
+    var x: (itemA: Int, itemB: Int)
+    x = (2, 0)
+    x.itemA
+
+
+
+
 
 # Optional
 

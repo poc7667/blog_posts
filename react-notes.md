@@ -15,6 +15,36 @@ one way 資料流： (dispatcher) -> (store) -> (view) -> (action) ----> (dispat
 
 <!-- more --> 
 
+# 2016-07-26
+
+Good practice.
+
+盡量保持 stateless.
+
+你也可以只建立一個 parent component, 只用來負責 hold states, 不用來畫也可以。
+
+component lifycycle:
+
+這邊提到的 mount willMount 說的是 mount 到 VDOM
+
+大多時間都會在 didMount 做事情，因為這個callback才會 trigger re-render.
+(記住，都只是在 VDOM 操作，不要養成 reail dom)
+
+
+Will mount (從ROOT 觸發到 leaf)
+Did mount ( leaf 回傳到 root), leaf 最先trigger 在把 callback 傳回給root
+
+## Immutability
+
+不要嘗試去 modify state, 直接 creat new array and replace the old one
+
+## data flow 概念
+
+通常 remote-api-interaction 不要四散在各地的componest, 集中在 top 執行。
+
+通常 action 會在 leaf 觸發，一個 checkbox 之類 在一路的calback 到root
+
+
 
 
 # material

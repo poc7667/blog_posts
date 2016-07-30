@@ -4,6 +4,10 @@ date: 2016-07-19 15:44:51
 tags: Nginx
 ---
 
+# Commands
+
+- check syntax `nginx -t`
+
 # Sections
 
 - basic auth
@@ -27,4 +31,18 @@ Nginx.conf
               auth_basic "Restricted";
               auth_basic_user_file /etc/nginx/.htpasswd;  #For Basic Auth
           }
+    }
+
+
+# Allow direcotry browse mode 
+
+Add `autoindex on;`
+
+    server {
+        listen      80 ;
+        server_name SERVER_NAME;
+        root /var/www/MEAN-development;
+        location / {
+         autoindex on;
+        }
     }
