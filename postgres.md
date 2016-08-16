@@ -8,6 +8,16 @@ Notes for postgresql operation
 
 <!-- more --> 
 
+# Create User (Ubuntu)
+
+    sudo su - postgres ; psql ;
+    psql -d template1 -U postgres
+
+# Change password
+    
+    ALTER USER "postgres" WITH PASSWORD 'jiyubiEzfly';
+    ALTER USER "postgres" WITH PASSWORD 'ucscext123';
+    \q
 
 
 遇到新舊版DB衝突，通常升級資料庫之後會遇到
@@ -55,10 +65,36 @@ Login postgresql on ubuntu and change password
 
 you need to change the auth method from `peer` to `md5` to enable Rails can works.
 
-    cd /etc/postgresql/9.5/main
-    sudo vim pg_hba.conf
+    sudo vim  /etc/postgresql/9.5/main/pg_hba.conf
     sudo /etc/init.d/postgresql restart
 
+# Forget password
+
+Change the authtication method to peer
+
+
+    sudo vim  /etc/postgresql/9.5/main/pg_hba.conf
+    sudo /etc/init.d/postgresql reload    
+    sudo su - postgres ; psql
+    AND change ur password in the following steps
 
 http://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge
 
+
+
+SELECT *
+FROM
+    (
+    SELECT
+       *
+       ,COUNT(*) OVER (PARTITION BY r.Id) as RoomDateCount
+    FROM
+       hotels h
+       INNER JOIN rooms r
+       ON h.Id = r.hotel_id
+       INNER JOIN room_skus s
+       ON r.id = s.room_id
+       AND s.date BETWEEN '2016-08-12' AND '2016-08-18'
+    ) t
+WHERE
+    t.RoomDateCount = DATE_PART('date', '2016-08-18' - '2016-08-12');
