@@ -4,6 +4,7 @@ date: 2016-07-21 19:02:55
 tags: iOS
 ---
 
+
 Notes for learning iOS / Swift 
 
 - Optional
@@ -11,14 +12,56 @@ Notes for learning iOS / Swift
 
 <!-- more --> 
 
+
+2016-08-04
+
+# Autolayout
+
+- Autolayout
+
+ Leading and trailing (左右的距離，但是會根據不同語系而改變 eg:希伯來就是右到左)
+
+
+Flexible constraints: 盡量使用。 少用 rigid constraints
+
+
+
+
+
+
+
+
+
+
+
+# NS XXXX
+
+
+
+NS系列是 next step 縮寫， 從foundation 過來的
+
+let 再這邊並不會 immutable
+
+NSString, NSArray, ... are immuatable. 這些都是object,再swift 是struct
+
+NSString ~ String (interchangeably)
+
+    import Foundation
+
+    let x: NSArray = ["x", "y", "z"] // NSArray has to hold Objects, so "x" is a NSString 
+
+Dictionary always returns __optional__
+
+數字不要說 cast,trancation
+
+
 # Adv String
 
-api 在3.0 有改變，
+API 在3.0 有改變，
 
-avanced 的方法要去了解。
+advanced 的方法要去了解。
 
 一個character 不代表一個 byte 而是代表一個 humman readable char 為單位，有可能是1~N byte
-
 
 
 # Adv tuples

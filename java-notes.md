@@ -4,9 +4,42 @@ date: 2016-07-08 20:27:51
 tags: Java
 ---
 
+要去看這邊的 code /Users/poc/workspace/courses-UCSC/java-comprehensive/resources/Demo Codes
+
 
 <!-- more --> 
 
+# 2016-08-12
+
+Demoday7 , dbtestapp.
+
+DBCreaterApp
+
+
+# exception
+
+unchecked exception: like Array outofboundary exception, you don't have to write exception handling.
+checked exception: 有些程式寫法，你一定要準備 exception, otherwise the compiler will blame you.
+
+# I/O
+
+
+
+facade pattern: 物質本身沒有改變、只是在外面__加上__一層。
+Design Pattern
+
+Decorator: 不改變原來行為，額外附加上去
+
+
+
+# Array
+
+primitive type array 在new 的時候，就把空間建立好。
+
+objects of array 在new 的時候，會建立好 array 的時候，就把空間建立好。
+但是object的空間、還沒有去 initializer
+
+    Product[] products = new Product[5];
 
 # Functional
 
