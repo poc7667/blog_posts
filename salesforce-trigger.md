@@ -6,8 +6,7 @@ tags: salesforce
 
 Triggers are similar to callbacks in `Ruby on Rails`
 
-Types
-
+## Types
 - before
 - after
 
